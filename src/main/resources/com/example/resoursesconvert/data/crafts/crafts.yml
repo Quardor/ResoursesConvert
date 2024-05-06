@@ -1,0 +1,15 @@
+crafts:
+  pruzhina_craft:
+    copper: 1
+    bronz: 1
+    coal_pil: 2
+  korpus_craft:
+    stal: 1
+    bronz: 1
+    coal_pil: 1
+  bronz_craft:
+    iron_bar: 2
+    copper: 2
+    laminar_pil: 4
+    gold_nugget: 1
+    kremniy_pil: 1

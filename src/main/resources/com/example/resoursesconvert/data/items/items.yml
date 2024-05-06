@@ -1,0 +1,41 @@
+items:
+  pruzhina:
+    name: "Пружина"
+    craft: "pruzhina_craft"
+    icon: 499
+  korpus:
+    name: "корпус"
+    craft: "korpus_craft"
+    icon: 498
+  copper:
+    name: "copper"
+    craft:
+    icon: 590
+  bronz:
+    name: "Бронза"
+    craft: "bronz_craft"
+    icon: 360
+  coal_pil:
+    name: "Угольная пыль"
+    craft:
+    icon: 359
+  iron_bar:
+    name: "Железный слиток"
+    craft:
+    icon: 684
+  laminar_pil:
+    name: Ламинарная пыль
+    craft:
+    icon: 388
+  gold_nugget:
+    name: rds
+    craft:
+    icon: 665
+  kremniy_pil:
+    name: dsfd
+    craft:
+    icon: 362
+  stal:
+    name: stal
+    craft:
+    icon: 433

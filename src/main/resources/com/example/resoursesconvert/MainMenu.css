@@ -1,0 +1,41 @@
+StackPane{
+    -fx-background-image: url("assets/background/main.png");
+}
+
+.gpButton {
+    -fx-translate-y: -60px;
+    -fx-background-image: url('assets/buttons/gp.png');
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);
+    -fx-pref-width: 257px;
+    -fx-pref-height: 104px;
+}
+
+.liteMaticaButton {
+    -fx-translate-y: 60px;
+    -fx-background-image: url('assets/buttons/litematica.png');
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);
+    -fx-pref-width: 257px;
+    -fx-pref-height: 104px;
+}
+
+.backButton {
+    -fx-translate-x: -390;
+    -fx-translate-y: 280;
+    -fx-background-image: url('assets/buttons/back.png');
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);
+    -fx-pref-width: 257px;
+    -fx-pref-height: 104px;
+}
+
+.scroll-pane{
+    -fx-background-color:transparent;
+}
