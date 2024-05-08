@@ -24,8 +24,6 @@ import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
 
-import static com.example.resoursesconvert.LiteMaticaConverter.resourcesToLight;
-
 public class MainFrame implements Frame {
 
 
