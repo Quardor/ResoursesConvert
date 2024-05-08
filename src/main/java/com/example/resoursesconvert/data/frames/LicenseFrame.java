@@ -1,27 +1,28 @@
 package com.example.resoursesconvert.data.frames;
 
 import com.example.resoursesconvert.Frame;
-import com.example.resoursesconvert.HelloApplication;
-import com.example.resoursesconvert.LiteMaticaConverter;
+import com.example.resoursesconvert.ResourceConverter;
 import com.example.resoursesconvert.data.Resources;
+import com.example.resoursesconvert.data.license.License;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.FileChooser;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.HashMap;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class LicenseFrame implements Frame {
 
     private final Stage stage;
     private Scene scene;
+
+    @FXML
+    private TextField licenseField;
+    @FXML
+    private Button licenseButton;
 
     public LicenseFrame(Stage stage) {
         this.stage = stage;
@@ -51,7 +52,17 @@ public class LicenseFrame implements Frame {
     @Override
     public void onInitialize() {
 
-
+        licenseButton.setOnAction(actionEvent -> {
+            if (!licenseField.getText().isEmpty()) {
+                String licenseText = licenseField.getText();
+                License license = new License("", licenseText, "", ResourceConverter.class.getName());
+                license.request();
+                if (license.isValid()) {
+                    Frame frame = new MainFrame(stage);
+                    frame.setVisible(true);
+                }
+            }
+        });
 
     }
 

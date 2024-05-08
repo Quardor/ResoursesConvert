@@ -2,20 +2,12 @@ package com.example.resoursesconvert;
 
 import com.example.resoursesconvert.data.Resources;
 import com.example.resoursesconvert.data.frames.CraftFrame;
-import com.example.resoursesconvert.data.frames.MainFrame;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextInputDialog;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.yaml.snakeyaml.Yaml;
 
@@ -72,7 +64,7 @@ public class LiteMaticaConverter implements Frame {
         FileInputStream fis = null;
         try {
             resources = LiteMaticaConverter(new InputStreamReader(new FileInputStream(filePath), "CP1251"));
-            filePath = HelloApplication.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\litematics_items.yml";
+            filePath = ResourceConverter.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\litematics_items.yml";
             fis = new FileInputStream(filePath);
         } catch (UnsupportedEncodingException | FileNotFoundException | URISyntaxException e) {
             throw new RuntimeException(e);
@@ -150,7 +142,7 @@ public class LiteMaticaConverter implements Frame {
         FileInputStream fis = null;
         String filePath = null;
         try {
-            filePath = HelloApplication.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\litematics_items.yml";
+            filePath = ResourceConverter.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\litematics_items.yml";
             fis = new FileInputStream(filePath);
         } catch (FileNotFoundException | URISyntaxException e) {
             throw new RuntimeException(e);

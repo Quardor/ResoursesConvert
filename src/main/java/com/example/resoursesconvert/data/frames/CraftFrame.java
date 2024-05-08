@@ -1,7 +1,7 @@
 package com.example.resoursesconvert.data.frames;
 
 import com.example.resoursesconvert.Frame;
-import com.example.resoursesconvert.HelloApplication;
+import com.example.resoursesconvert.ResourceConverter;
 import com.example.resoursesconvert.data.Resources;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,6 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -21,14 +20,11 @@ import javafx.stage.Stage;
 import lombok.Getter;
 import org.yaml.snakeyaml.Yaml;
 
-import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class CraftFrame implements Frame{
@@ -151,7 +147,7 @@ public class CraftFrame implements Frame{
         HashMap<String, Integer> res = frame.getResources();
 
         try {
-            String newfilePath = HelloApplication.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\" + fileName;
+            String newfilePath = ResourceConverter.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\" + fileName;
             FileInputStream fis = new FileInputStream(newfilePath);
             Map<String, Map<String, Map<String, String>>> data = yaml.load(fis);
             Map<String, Map<String, String>> items = data.get("items");

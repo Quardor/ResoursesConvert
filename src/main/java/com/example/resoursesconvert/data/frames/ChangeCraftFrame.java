@@ -1,7 +1,7 @@
 package com.example.resoursesconvert.data.frames;
 
 import com.example.resoursesconvert.Frame;
-import com.example.resoursesconvert.HelloApplication;
+import com.example.resoursesconvert.ResourceConverter;
 import com.example.resoursesconvert.data.Resources;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,12 +10,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Slider;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -75,7 +72,7 @@ public class ChangeCraftFrame implements Frame {
 
         try {
 
-            String filePath = HelloApplication.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\items.yml";
+            String filePath = ResourceConverter.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\data\\items\\items.yml";
 
             FileInputStream fis = new FileInputStream(filePath);
 

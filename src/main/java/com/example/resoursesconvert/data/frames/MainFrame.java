@@ -1,7 +1,7 @@
 package com.example.resoursesconvert.data.frames;
 
 import com.example.resoursesconvert.Frame;
-import com.example.resoursesconvert.HelloApplication;
+import com.example.resoursesconvert.ResourceConverter;
 import com.example.resoursesconvert.LiteMaticaConverter;
 import com.example.resoursesconvert.data.Resources;
 import javafx.fxml.FXML;
@@ -9,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.FlowPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -39,7 +38,7 @@ public class MainFrame implements Frame {
 
     static {
         try {
-            IMAGE_DIRECTORY = HelloApplication.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\textures";
+            IMAGE_DIRECTORY = ResourceConverter.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath() + "com\\example\\resoursesconvert\\textures";
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }

@@ -6,7 +6,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>ResoursesConvert</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1</version>
     <name>ResoursesConvert</name>
 
     <properties>
@@ -145,7 +145,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.resoursesconvert/com.example.resoursesconvert.HelloApplication
+                            <mainClass>com.example.resoursesconvert/com.example.resoursesconvert.ResourceConverter
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
@@ -170,7 +170,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.example.resoursesconvert.HelloApplication</mainClass>
+                                    <mainClass>com.example.resoursesconvert.ResourceConverter</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
