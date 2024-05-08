@@ -82,7 +82,6 @@ public class LicenseFrame implements Frame {
 
     @FXML
     private void initialize() {
-
         AtomicReference<HashMap<String, Integer>> map = new AtomicReference<>(new HashMap<>());
 
         liteMaticaButton.setOnAction(e -> {
