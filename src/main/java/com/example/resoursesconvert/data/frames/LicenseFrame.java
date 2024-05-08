@@ -139,6 +139,7 @@ public class LicenseFrame implements Frame {
             Frame frame = new ChangeCraftFrame(stage, images);
             frame.setVisible(true);
         });
+
     }
 
 }
