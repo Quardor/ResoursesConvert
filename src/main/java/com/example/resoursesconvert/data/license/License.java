@@ -1,14 +1,10 @@
 package com.example.resoursesconvert.data.license;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-@Getter
 public class License {
 
     private final String license;
@@ -16,7 +12,50 @@ public class License {
     private final String plugin;
     private final String requestKey;
 
-    @Setter
+    public void setDebug(boolean debug) {
+        this.debug = debug;
+    }
+
+    public String getLicense() {
+        return license;
+    }
+
+    public String getServer() {
+        return server;
+    }
+
+    public String getPlugin() {
+        return plugin;
+    }
+
+    public String getRequestKey() {
+        return requestKey;
+    }
+
+    public boolean isDebug() {
+        return debug;
+    }
+
+    public boolean isValid() {
+        return valid;
+    }
+
+    public ReturnType getReturnType() {
+        return returnType;
+    }
+
+    public String getGeneratedBy() {
+        return generatedBy;
+    }
+
+    public String getLicensedTo() {
+        return licensedTo;
+    }
+
+    public String getGeneratedIn() {
+        return generatedIn;
+    }
+
     private boolean debug = false;
     private boolean valid = false;
     private ReturnType returnType;

@@ -34,7 +34,7 @@ public interface Frame {
         }
     }
 
-    private static void fadeInTransition(Parent root) {
+    static void fadeInTransition(Parent root) {
         FadeTransition fadeIn = new FadeTransition(Duration.millis(500), root);
         fadeIn.setFromValue(0.0);
         fadeIn.setToValue(1.0);

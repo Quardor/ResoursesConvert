@@ -40,6 +40,20 @@ public class LicenseFrame implements Frame {
                 this.scene = scene;
                 stage.setTitle(" ");
                 stage.setResizable(false);
+                licenseButton.setOnAction(actionEvent -> {
+                    System.out.println("123");
+                    String licenseText = licenseField.getText();
+                    License license = new License(
+                            "6QgyURDL4s6X00KxfNatwK7PkWbHSp488kqPXugfTekpqNqfgPK4M8LU18A0dM2G3oyuUhxxRHoN1u3hz9fIAr46e06QgyURDL4s6X00KxfNatwK7PkWbHSp488kqPXugfTekpqNqfgPK4M8LU18A0dM2G3oyuUhxxRHoN1u3hz9fIAr46e0",
+                            licenseText,
+                            "http://85.159.231.2",
+                            "ResourceConverter");
+                    license.request();
+                    if (license.isValid()) {
+                        Frame frame = new MainFrame(stage);
+                        frame.setVisible(true);
+                    }
+                });
                 Frame.switchToScene(stage.getScene(), scene, stage);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -51,18 +65,6 @@ public class LicenseFrame implements Frame {
 
     @Override
     public void onInitialize() {
-
-        licenseButton.setOnAction(actionEvent -> {
-            if (!licenseField.getText().isEmpty()) {
-                String licenseText = licenseField.getText();
-                License license = new License("", licenseText, "", ResourceConverter.class.getName());
-                license.request();
-                if (license.isValid()) {
-                    Frame frame = new MainFrame(stage);
-                    frame.setVisible(true);
-                }
-            }
-        });
 
     }
 

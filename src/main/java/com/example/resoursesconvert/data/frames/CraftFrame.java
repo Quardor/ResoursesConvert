@@ -40,8 +40,11 @@ public class CraftFrame implements Frame{
     private int pageNumber = 0;
     private String craftPath;
 
-    @Getter
     private HashMap<String, Integer> resources;
+
+    public HashMap<String, Integer> getResources() {
+        return resources;
+    }
 
     private int count;
 
